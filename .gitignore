@@ -26,3 +26,15 @@
 *.exe
 *.out
 *.app
+
+# IDE files
+*.suo
+*.sdf
+*.opensdf
+
+# Debug files
+*.ilk
+*.log
+*.pdb
+*.tlog
+*.idb
