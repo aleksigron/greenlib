@@ -83,6 +83,7 @@
     <ClCompile Include="..\src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\greenlib\RandomGenerator.hpp" />
     <ClInclude Include="..\..\include\greenlib\TimeDuration.hpp" />
     <ClInclude Include="..\..\include\greenlib\TimePoint.hpp" />
     <ClInclude Include="..\..\include\greenlib\TimeSpan.hpp" />

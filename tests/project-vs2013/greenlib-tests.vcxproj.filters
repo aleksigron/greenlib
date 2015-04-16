@@ -8,9 +8,6 @@
     <Filter Include="lib">
       <UniqueIdentifier>{965fb5f9-8a05-4ffd-9aa8-64efe57dd61e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="lib\time">
-      <UniqueIdentifier>{9ce95444-61f8-4a68-b08b-c400556d553e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Main.cpp">
@@ -18,14 +15,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\greenlib\RandomGenerator.hpp">
+      <Filter>lib</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\greenlib\TimeDuration.hpp">
-      <Filter>lib\time</Filter>
+      <Filter>lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\greenlib\TimePoint.hpp">
-      <Filter>lib\time</Filter>
+      <Filter>lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\greenlib\TimeSpan.hpp">
-      <Filter>lib\time</Filter>
+      <Filter>lib</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

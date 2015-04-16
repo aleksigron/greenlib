@@ -1,6 +1,10 @@
+#include <iostream>
+
 #include "greenlib/TimePoint.hpp"
 #include "greenlib/TimeDuration.hpp"
 #include "greenlib/TimeSpan.hpp"
+
+#include "greenlib/RandomGenerator.hpp"
 
 int main()
 {
@@ -19,5 +23,14 @@ int main()
 	bool containedInSurroundingDays = surroundingDays.Contains(point0);
 
 	TimeSpan nextWeek(point0, TimeDuration::Days(7));
-	bool startOfNextWeekContainedInThisWeek = nextWeek.Contains(point0 + TimeDuration::Days(7));
+	bool thisWeekCointainsStartOfNextWeek = nextWeek.Contains(point0 + TimeDuration::Days(7));
+
+	RandomGenerator_Int rng;
+	rng.InitializeDistribution(0, 255);
+
+	for (int i = 0; i < 32; ++i)
+		std::cout << rng.Generate() << " ";
+
+	char c;
+	std::cin >> c;
 }
