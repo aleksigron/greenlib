@@ -6,9 +6,13 @@
 
 #include "greenlib/RandomGenerator.hpp"
 
+#include "greenlib/PerformanceTimer.hpp"
+
 int main()
 {
 	using namespace grn;
+
+	PerformanceTimer timer;
 	
 	TimeDuration oneSec = TimeDuration::Seconds(1);
 	TimeDuration oneMin = TimeDuration::Minutes(1);
@@ -28,8 +32,17 @@ int main()
 	RandomGenerator_Int rng;
 	rng.InitializeDistribution(0, 255);
 
-	for (int i = 0; i < 32; ++i)
+	std::cout << "Random [0, 255]:\n";
+
+	for (int i = 0; i < 128; ++i)
 		std::cout << rng.Generate() << " ";
+	
+	std::cout << "\n";
+
+	double elapsedTime = timer.ElapsedSeconds();
+	long long elapsedNanoseconds = timer.ElapsedNanoseconds();
+
+	std::cout << elapsedTime << " s, " << elapsedNanoseconds << " ns\n";
 
 	char c;
 	std::cin >> c;

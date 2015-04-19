@@ -27,5 +27,8 @@
     <ClInclude Include="..\..\include\greenlib\TimeSpan.hpp">
       <Filter>lib</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\greenlib\PerformanceTimer.hpp">
+      <Filter>lib</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
