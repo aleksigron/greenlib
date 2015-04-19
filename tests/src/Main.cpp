@@ -29,7 +29,7 @@ int main()
 	TimeSpan nextWeek(point0, TimeDuration::Days(7));
 	bool thisWeekCointainsStartOfNextWeek = nextWeek.Contains(point0 + TimeDuration::Days(7));
 
-	RandomGenerator_Int rng;
+	RandomGeneratorInt rng;
 	rng.InitializeDistribution(0, 255);
 
 	std::cout << "Random [0, 255]:\n";

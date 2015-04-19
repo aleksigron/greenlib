@@ -2,6 +2,7 @@
 
 #include <random>
 #include <limits>
+#include <cstdint>
 
 namespace grn
 {
@@ -58,9 +59,9 @@ namespace grn
 		}
 	};
 
-	typedef RandomGenerator<int, std::uniform_int_distribution<int>> RandomGenerator_Int;
-	typedef RandomGenerator<long, std::uniform_int_distribution<long>> RandomGenerator_Long;
-	typedef RandomGenerator<long long, std::uniform_int_distribution<long long>> RandomGenerator_LongLong;
-	typedef RandomGenerator<float, std::uniform_real_distribution<float>> RandomGenerator_Float;
-	typedef RandomGenerator<double, std::uniform_real_distribution<double>> RandomGenerator_Double;
+	using RandomGeneratorInt = RandomGenerator<int, std::uniform_int_distribution<int>>;
+	using RandomGeneratorInt32 = RandomGenerator<std::int32_t, std::uniform_int_distribution<std::int32_t>>;
+	using RandomGeneratorInt64 = RandomGenerator<std::int64_t, std::uniform_int_distribution<std::int64_t>>;
+	using RandomGeneratorFloat = RandomGenerator<float, std::uniform_real_distribution<float>>;
+	using RandomGeneratorDouble = RandomGenerator<double, std::uniform_real_distribution<double>>;
 }
